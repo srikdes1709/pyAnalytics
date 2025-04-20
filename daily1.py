@@ -212,7 +212,7 @@ import pandas as pd
 help(pd)
 dir(pd)
 
-df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
+df1 = pd.DataFrame({'rollno':[1,2,3,4,5], 'name': [ "Srikar", "Vaman", "Akhil", "Pooja", "Akshitha" ], 'marks':[ 40, 50, 60.5, 70, 65 ], 'gender':['M', 'M','M', 'F', 'F'], 'Course':['MBA', 'MIS', 'MSBA', 'MSBA', 'MBA'], 'seq':np.arange(start=10,stop=15,step=1)})
 df1
 type(df1) 
 
@@ -223,7 +223,7 @@ df1.dtypes #data types
 df1.shape  # rows and columns
 df1.groupby('gender').size()
 df1.groupby('gender')['marks'].mean()
-df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
+df1.groupby(['gender', 'Course']).aggregate({'marks': [np.mean, 'max','min','std','count']})
 
 #%% #Graphs https://python-graph-gallery.com/
 #https://matplotlib.org/
@@ -280,11 +280,11 @@ writer.save()
 #%%
 help(data.to_excel)
 #load from CSV and Excel
-data2a  #not defined
+#data2a  #not defined
 data2a = pd.read_csv('mtcars.csv') #when csv is in project folder
 data2a
-data2b #not defined
-data2b = pd.read_csv('E:/analytics/projects/pyanalytics/mtcars.csv')
+#data2b #not defined
+data2b = pd.read_csv('/Users/srikardesikan/Documents/analytics/projects/pyAnalytics/mtcars.csv')
 data2b
 #csv in any other location - full path
 data2b
