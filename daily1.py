@@ -2,9 +2,9 @@
 #-----------------------------
 #Data Structures
 #List - ordered collection of items, mutable(changeable) : [square ]
-list1 = [1,2,3,4,5,'a','Dhiraj',"Upadhyaya",True]  #list type of object with data
+list1 = [1,2,3,4,5,'a','Srikar Desikan',"Puranam Hosudurg",True]  #list type of object with data
 list1  #print when through spyder
-type(list1)  #type of object
+type(list1)  #type  of object
 print(list1)  #print when running complete file
 list1
 sorted([100000,5,3,2,4,5,324,43,4,4,3,23,434,53442,244,2245224,523])
@@ -56,7 +56,7 @@ car  #mutable , value can be changed
 from frozendict import frozendict
 fd = frozendict({ 'brand': 'Honda' })
 fd
-fd['brand'] = 'HYUNDIA'   #immutatble
+fd['brand'] = 'HYUNDAI'   #immutatble
 
 #%% { curly bracket, comma}
 #Set - ordered collection of simple items, immutable
@@ -119,11 +119,11 @@ for i in list1:
   
 for i in list1:    print(i , end ='\t')
 #print?  #help
-for i in list2:    print(i, 'DU' , sep='-' , end ='xxx')
+for i in list2:    print(i, 'DU' , sep='-' , end ='xxx\t')
 #a-DU-xxx ; i+sep+end
 for i in list1:    print(i , 'HHHE', sep=' X ' , end ='\t')
 
-for i in list1:    print('Dhiraj ', i + 6)
+for i in list1:    print('Srikar ', i + 6)
 
 tuple1 = (1, 2, 'a', 'b')
 tuple1
@@ -167,6 +167,7 @@ np1 = np.arange(1,10)
 np1
 
 x=np.arange(start=1,stop=1000000,step=2)
+x
 len(x)
 x[1:100]
 x[1:50:10]
@@ -182,6 +183,8 @@ help(np.mean)  # help on mean function of numpy
 np2 = np.array([ 90, 50, 60, 70 ])
 np2
 np.sort(np2)
+np2.mean()
+np2
 dir(np)
 
 np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
@@ -191,14 +194,14 @@ np3.shape[0]
 np3.shape[1]
 x= np3.shape[0] * np3.shape[1]
 x
-x%2 == 0
-x%3 == 0 #true 
+x%2 == 0 #True
+x%3 == 0 #False 
 len(np3)
 np3.reshape((-1,1))  #1 column from 2 column
-np3.reshape((-1))
-np3.reshape((-1,2))
+np3.reshape((-1)) #Make it just one row
+np3.reshape((-1,2)) #Add column
 np3.reshape((-1,3))  #error
-np3.reshape((-1,4))
+np3.reshape((-1,4)) #2 rows 4 columns
 
 #http://cs231n.github.io/python-numpy-tutorial/
 #%% #pandas - dataframe, excel like
