@@ -293,6 +293,10 @@ data2a.head()
 data2c = pd.read_excel('mtcarsExcel.xlsx',header=0)
 #header=None
 data2c.head()
-
+data2c.describe()
+data2c.columns
+data2b.columns
+data2b.groupby('gear').size()
+data2b.groupby(['gear', 'cyl']).aggregate({'mpg' : [np.mean, 'max', 'min', 'count', np.max], 'wt' : np.mean})
 #end here....
 #now practise numpy and pandas....
